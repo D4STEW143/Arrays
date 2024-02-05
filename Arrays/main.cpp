@@ -4,6 +4,9 @@
 
 using namespace std;
 
+#define BITWISE_OPERATORS_TASK
+#define ARRAYS_TASK
+
 void main()
 {
 	setlocale(LC_ALL, "");
@@ -18,7 +21,16 @@ void main()
 	//}
 	//cout << endl;
 
+#ifdef BITWISE_OPERATORS_TASK
+	int a = 5;
+	int b = 7;
+	a ^= b ^= a ^= b;
+	cout << a << " " << b << endl;
+#endif
 
+
+
+#ifdef ARRAYS_TASK
 	int choose = 0;
 	//Создаем массив
 	const int size = 5;
@@ -102,5 +114,5 @@ void main()
 		cout << endl;
 		cout << "Прекращение работы программы.";
 	}
-	
+#endif
 }
